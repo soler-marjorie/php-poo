@@ -21,7 +21,7 @@ class magicien extends AbstractPersonnage {
     /**
      * Set the value of mana
      */
-    public function setMana(?int $mana): self
+    public function setMana(?int $mana): Magicien
     {
         $this->mana = $mana;
 

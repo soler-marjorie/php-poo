@@ -13,9 +13,9 @@ $sort = new ProjectileMagique("Boule de feu");
 $guerrier = new Guerrier();
 $guerrier->afficher();
 $voleur = new Voleur();
-$voleur->setNom()->setComportementArme()->setType();
-$magicien = new Magicien();
-$magicien->setNom()->setComportementArme()->setType();
+// $voleur->setNom()->setComportementArme()->setType();
+// $magicien = new Magicien();
+// $magicien->setNom()->setComportementArme()->setType();
 
 $guerrier->getComportementArme()->attaquer();
 $voleur->getComportementArme()->attaquer();

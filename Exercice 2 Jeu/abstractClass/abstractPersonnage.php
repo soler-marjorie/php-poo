@@ -26,9 +26,9 @@ abstract class AbstractPersonnage{
     /**
      * Set the value of nom
      */
-    public function setNom(?string $newNom): AbstractPersonnage
+    public function setNom(?string $nom): AbstractPersonnage
     {
-        $this->nom = $newNom;
+        $this->nom = $nom;
         return $this;
     }
 
@@ -43,9 +43,9 @@ abstract class AbstractPersonnage{
     /**
      * Set the value of comportementArme
      */
-    public function setComportementArme(?InterfaceArme $newComportementArme): AbstractPersonnage
+    public function setComportementArme(?InterfaceArme $comportementArme): AbstractPersonnage
     {
-        $this->comportementArme = $newComportementArme;
+        $this->comportementArme = $comportementArme;
         return $this;
     }
 
@@ -60,9 +60,9 @@ abstract class AbstractPersonnage{
     /**
      * Set the value of type
      */
-    public function setType(?string $newType): AbstractPersonnage
+    public function setType(?string $type): AbstractPersonnage
     {
-        $this->type = $newType;
+        $this->type = $type;
         return $this;
     }
 
@@ -70,7 +70,7 @@ abstract class AbstractPersonnage{
     public abstract function afficher():void;
 
     public function attaquer(): void {
-        if ($this->getComportementArme() instanceof ProjectileMagique && $this->type !== "Magicien") {
+        if ($this->getComportementArme() == "ProjectileMagique" && $this->type !== "Magicien") {
             echo "<p>{$this->nom} ne peut pas utiliser le Projectile Magique !</p>";
             return;
         }
